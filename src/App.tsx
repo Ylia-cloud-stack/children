@@ -23,7 +23,7 @@ function App() {
 
 
   return (
-      <BrowserRouter>
+      <BrowserRouter basename="/children">
           <Routes>
               {/* главный экран‑заставка */}
               <Route path="/" element={<Landing />} />
