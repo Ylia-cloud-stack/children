@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@layer utilities {
+    .font-cruin {
+        font-family: 'Cruin', sans-serif;
+    }
+}
