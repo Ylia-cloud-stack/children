@@ -1,4 +1,4 @@
-import {BrowserRouter, Navigate, Outlet, Route, Routes} from "react-router-dom";
+import { HashRouter, Navigate, Outlet, Route, Routes} from "react-router-dom";
 import Landing from "./screens/Landing.tsx";
 import Services from "./screens/Services.tsx";
 import Teachers from "./screens/Teachers.tsx";
@@ -23,7 +23,7 @@ function App() {
 
 
   return (
-      <BrowserRouter basename="/children">
+      <HashRouter>
           <Routes>
               {/* главный экран‑заставка */}
               <Route path="/" element={<Landing />} />
@@ -40,7 +40,7 @@ function App() {
               {/* редирект «всё остальное» на главную */}
               <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
-      </BrowserRouter>
+      </HashRouter>
   )
 }
 
